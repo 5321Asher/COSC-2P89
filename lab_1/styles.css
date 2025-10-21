@@ -30,34 +30,74 @@ a:hover {
 }
 
 .header-nav {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .nav {
-    display: inline;
+  display: inline;
 }
 
 .nav li {
-    display: inline;
-    margin-right: 15px;
-    margin-left: 15px;
+  display: inline;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .nav button {
-    background-color: #5a8aba;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #5a8aba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .nav button:hover {
-    background-color: #4178a0;
-    font-size: 24px;
+  background-color: #4178a0;
+  font-size: 24px;
+}
+
+.button {
+  background-color: #5a8aba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#changeTableData {
+  display: none;
+  background-color: #5a8aba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addMovieButton {
+  background-color: #5a8aba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }

@@ -29,44 +29,63 @@
       <nav class="header-nav">
         <h2>Naviation</h2>
         <ul class="nav">
-          <li><a href="./index.html"><button>Home</button></a></li>
-          <li><a href="./photos.html"><button>Photos</button></a></li>
+          <li>
+            <a href="./index.html"><button>Home</button></a>
+          </li>
+          <li>
+            <a href="./photos.html"><button>Photos</button></a>
+          </li>
           <li><button>Movies</button></li>
         </ul>
       </nav>
     </header>
 
     <h2>My Top 5 Favorites</h2>
-    <table>
+    <table id="movietable">
       <tr>
-        <td>Movie Name</td>
-        <td>Rating</td>
+        <th>Movie Name</th>
+        <th><button class="button" onclick="tablesort()">rating</button></th>
       </tr>
       <tr>
         <td>Whiplash</td>
-        <td>10/10</td>
+        <td>5</td>
       </tr>
       <tr>
-        <td>Dead Poets Scoiety</td>
-        <td>10/10</td>
+        <td>Dead Poets Society</td>
+        <td>6</td>
       </tr>
       <tr>
         <td>The Prestige</td>
-        <td>9/10</td>
+        <td>7</td>
       </tr>
       <tr>
         <td>Ready Player One</td>
-        <td>7/10</td>
+        <td>8</td>
       </tr>
       <tr>
         <td>The Maze Runner</td>
-        <td>8/10</td>
+        <td>9</td>
       </tr>
       <tr>
         <td>H.M. back to the future</td>
-        <td>8/10</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button id="addMovieButton" onclick="addMovie()">Add movie</button>
+        </td>
       </tr>
     </table>
+
+    <div id="changeTableData">
+      <label for="name">Name: </label>
+      <input type="text" id="name" value="New Movie" />
+
+      <label for="rating">Rating: </label>
+      <input type="number" id="rating" value="5" />
+
+      <button onclick="changeTable()">Change cell</button>
+    </div>
 
     <p>
       Although Ready Player One is in my top five I am aware its objectively not
@@ -88,5 +107,6 @@
         </tr>
       </table>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
