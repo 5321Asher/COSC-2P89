@@ -1,19 +1,37 @@
 <html>
-    <meta name="viewport", content="width=device-width, initial-scale=1, user-scalable=yes" />
+  <meta
+    name="viewport"
+    ,
+    content="width=device-width, initial-scale=1, user-scalable=yes"
+  />
 
   <head>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+    </style>
     <title>Asher Virgona - Movies</title>
   </head>
   <body>
     <header>
       <h1 align="center">My Favorite Movies</h1>
 
-      <nav>
+      <nav class="header-nav">
         <h2>Naviation</h2>
-        <ul>
-          <li><a href="./index.HTML">Home</a></li>
-          <li><a href="./photos.HTML">Photos</a></li>
-          <li><b>Movies</b></li>
+        <ul class="nav">
+          <li><a href="./index.html"><button>Home</button></a></li>
+          <li><a href="./photos.html"><button>Photos</button></a></li>
+          <li><button>Movies</button></li>
         </ul>
       </nav>
     </header>
@@ -56,7 +74,11 @@
     </p>
 
     <h3>Whiplash</h3>
-    <img src="./imgs/whiplash.png" alt="Cover thumbnail of whiplash" style="width: 75%;" />
+    <img
+      src="./imgs/whiplash.png"
+      alt="Cover thumbnail of whiplash"
+      style="width: 75%"
+    />
 
     <br /><br /><br />
     <footer>
