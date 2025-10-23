@@ -1,0 +1,148 @@
+/* Name: Asher Virgona */
+/* Brock Username: gx23gq */
+/* Student Number: 8032492 */
+
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Cedarville+Cursive&family=Oswald:wght@200..700&display=swap");
+/*fonts: BBH Sans Bogle, Cedarville Cursive, Oswald*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Oswald, sans-serif;
+  margin: 0;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  z-index: 1000;
+}
+
+.navbar img {
+  width: auto;
+  height: clamp(2rem, 5vw, 8rem);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-size: clamp(1.2rem, 1.8vw, 3vw);
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #6b0909;
+}
+
+.hero-Home {
+  position: relative;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roma {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.car-text {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  font-size: clamp(1.5rem, 8vw, 10vw);
+  font-family: "Cedarville Cursive", cursive;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.new-arrival {
+  position: absolute;
+  top: 22%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  color: rgb(90, 90, 90);
+  font-size: clamp(1.2rem, 2.5vw, 5vw);
+  font-family: "Oswald", cursive;
+}
+
+.learn-more-button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.8vw 1.6vw;
+  font-size: clamp(1rem, 2vw, 3vw);
+  font-family: Oswald, sans-serif;
+  text-decoration: none;
+  background-color: #6b0909;
+  color: white;
+  border: none;
+  border-radius: 0.3vw;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  height: 7%;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Oswald, sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 2vw);
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: static;
+  }
+}
