@@ -10,7 +10,7 @@
     <title>Virgona Racing</title>
     <link rel="icon" href="images/VirgonaRacing.png" type="png" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
   </head>
   <body>
     <nav class="navbar">
@@ -19,66 +19,59 @@
       </div>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li style="font-size: 40px">Cars</li>
+        <li style="font-size: clamp(1.5rem, 2.5vw, 5vw)">Cars</li>
         <li><a href="contact.html">Inquire</a></li>
         <li><a href="faq.html">FAQ</a></li>
       </ul>
     </nav>
 
-     <div class="hero">
-        <p class="car-text">Ferrari Roma</p>
-        <img
-          src="images/ferrari-roma.png"
-          alt="Roma Car"
-          type="png"
-          class="roma"
-        />
-        <a href="product_1.html" class="learn-more-button">Learn More</a>
-      </div>
+    <div class="hero">
+      <p class="car-text">Ferrari Roma</p>
+      <img
+        src="images/ferrari-roma.png"
+        alt="Roma Car"
+        class="roma"
+        loading="lazy"
+      />
+      <a href="product_1.html" class="learn-more-button">Learn More</a>
     </div>
 
     <div class="hero">
-        <p class="car-text" style="top: 22%">Porsche GT4 RS</p>
-        <img
-          src="images/porsche-gt4rs.png"
-          alt="GT4 RS Car"
-          type="png"
-          class="roma"
-        />
-        <a href="product_2.html" class="learn-more-button">Learn More</a>
-      </div>
+      <p class="car-text">Porsche GT4 RS</p>
+      <img
+        src="images/porsche-gt4rs.png"
+        alt="GT4 RS Car"
+        class="roma"
+        loading="lazy"
+      />
+      <a href="product_2.html" class="learn-more-button">Learn More</a>
     </div>
 
     <div class="hero">
-        <p class="car-text">Mclaren 720S</p>
-        <img
-          src="images/mclaren-720s.png"
-          alt="Mclaren 720S Car"
-          type="png"
-          class="roma"
-        />
-        <a href="product_3.html" class="learn-more-button">Learn More</a>
-      </div>
+      <p class="car-text">Mclaren 720S</p>
+      <img
+        src="images/mclaren-720s.png"
+        alt="Mclaren 720S Car"
+        class="roma"
+        loading="lazy"
+      />
+      <a href="product_3.html" class="learn-more-button">Learn More</a>
     </div>
 
     <div class="hero">
-        <p class="car-text">Mercedes Sl65 Black</p>
-        <img
-          src="images/mercedes-sl65.png"
-          alt="Mercedes SL65 Car"
-          type="png"
-          class="roma"
-        />
-        <a href="product_4.html" class="learn-more-button">Learn More</a>
-      </div>
+      <p class="car-text">Mercedes Sl65 Black</p>
+      <img
+        src="images/mercedes-sl65.png"
+        alt="Mercedes SL65 Car"
+        class="roma"
+        loading="lazy"
+      />
+      <a href="product_4.html" class="learn-more-button">Learn More</a>
     </div>
-
-    <div style="height: 20vh;"></div>
 
     <footer class="footer">
       <p>© 2025 Virgona Racing. All rights reserved.</p>
-     
-      <p>Citations</p> <!-- Add JS script to expand citations list -->
+      <p>Citations</p>
     </footer>
   </body>
 </html>
