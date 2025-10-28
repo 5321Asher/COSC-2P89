@@ -84,11 +84,11 @@ function changeTable() {
 
   console.log(
     "Changed row " +
-      rowUserInput +
-      ", column " +
-      colUserInput +
-      " to: " +
-      newText
+    rowUserInput +
+    ", column " +
+    colUserInput +
+    " to: " +
+    newText
   );
 }
 
@@ -100,4 +100,71 @@ function toggleDiv() {
   } else {
     divElement.style.display = "none";
   }
+}
+
+
+var counter = 3;
+function augment() {
+  counter = (counter + 1) % 10;
+  window.bar.value = counter;
+}
+
+function swap(id) {
+  im = document.getElementById(id);
+  im.style.borderColor = 'red';
+  im.addEventListener('load', function (im) { im.target.style.borderColor = 'black'; });
+  im.src = "https://picsum.photos/2000/3000/?image=" + Math.floor(Math.random() * 10) + Math.floor(Math.random() * 10) + Math.floor(Math.random() * 10);
+
+
+  window.addEventListener('load', function () {
+    this.window.clicker.addEventListener('click', function () {
+      swap('1');
+      swap('2');
+      swap('3');
+      swap('4');
+    });
+  })
+}
+
+function buildgrid() {
+  container = window.container;
+  for (r = 0; r < 4; r++) {
+    nextrow = document.createElement('div');
+    for (c = 0; c < 4; c++) {
+      cell = document.createElement('div');
+      cell.id = "r" + r + "c" + c;
+      cell.className = "daelie";
+      if (grid[cell.id]) cell.classList.toggle('on');
+      cell.addEventListener('click', togglecell);
+      container.appendChild(cell);
+    }
+    container.appendChild(nextrow);
+  }
+}
+window.addEventListener('load', buildgrid);
+
+function loadstate() {
+  if (localStorage.getItem('gridstate')) {
+    griddle = JSON.parse(localStorage.getItem('gridstate'));
+  } else {
+    griddle = {};
+    for (r = 0; r < 4; r++) {
+      for (c = 0; c < 4; c++) {
+        griddle["r" + r + "c" + c] = false;
+      }
+    }
+  }
+  return griddle;
+}
+var grid = loadstate();
+
+function savestate() {
+  localStorage.setItem('gridstate', JSON.stringify(grid));
+}
+
+function togglecell(event) {
+  cell = event.target;
+  newstate = cell.classList.toggle('on');
+  grid[cell.id] = newstate;
+  savestate();
 }
