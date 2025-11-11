@@ -1,0 +1,487 @@
+/* Name: Asher Virgona */
+/* Brock Username: gx23gq */
+/* Student Number: 8032492 */
+
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Cedarville+Cursive&family=Oswald:wght@200..700&display=swap");
+/*fonts: BBH Sans Bogle, Cedarville Cursive, Oswald*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Oswald, sans-serif;
+  margin: 0;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  z-index: 1000;
+}
+
+.navbar img {
+  width: auto;
+  height: clamp(2rem, 5vw, 8rem);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-size: clamp(1.2rem, 1.8vw, 3vw);
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #6b0909;
+}
+
+.hero-Home {
+  position: relative;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: min(92%, 1200px);
+  margin: 12vh auto 3rem;
+  overflow: visible;
+}
+
+.roma {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.car-text {
+  position: absolute;
+  left: clamp(12px, 4vw, 48px);
+  top: clamp(8px, 3vw, 40px);
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 9.5vw, 7.5rem);
+  color: #fff;
+  opacity: 0.95;
+  line-height: 0.9;
+  white-space: nowrap;
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.35);
+}
+
+.learn-more-button {
+  position: absolute;
+  left: 5%;
+  bottom: 8%;
+  z-index: 3;
+  padding: 0.7rem 1.1rem;
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: saturate(140%) blur(2px);
+}
+
+.welcome {
+  margin-top: 10%;
+  margin-bottom: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+}
+
+.welcome p,
+h1 {
+  margin: 5%;
+}
+
+.welcome img {
+  width: 30vw;
+  margin-left: 5%;
+}
+
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Oswald, sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 2vw);
+  z-index: 999;
+}
+
+.page {
+  padding-top: 12vh;
+  margin-bottom: 10vh;
+}
+
+.faq-header {
+  display: flex;
+  margin-bottom: 2rem;
+  flex-direction: column;
+}
+
+.faq-header h1 {
+  margin-left: 1rem;
+  font-size: clamp(1rem, 5vw, 3rem);
+}
+
+.faq-header img {
+  align-items: center;
+  width: 10%;
+  height: auto;
+}
+
+.product-desc li {
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  align-items: stretch;
+  margin: 2rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  gap: 0;
+}
+
+.main-card {
+  width: min(80%, 1200px);
+}
+
+.mini-card {
+  width: min(70%, 1100px);
+}
+
+.product-image,
+.product-desc {
+  flex: 1 1 50%;
+  min-height: 320px;
+}
+
+.product-image {
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.product-desc {
+  background: #fff;
+  padding: clamp(16px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab {
+  cursor: pointer;
+  text-decoration: solid underline red 0.2vw;
+  font-size: 1.5vw;
+}
+
+.tab:hover {
+  font-size: 2vw;
+  text-decoration: solid underline red 0.4vw;
+}
+
+.tab.active {
+  font-size: 2vw;
+  text-decoration: solid underline red 0.4vw;
+}
+
+.spec-table {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.spec-table tr td {
+  text-align: right;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.spec-table th {
+  background: #f4f4f4;
+}
+
+.spec-table .odd {
+  background: #f9f9f9;
+}
+
+.review {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.content-bar {
+  width: min(80%, 1200px);
+  margin: 1rem auto 2rem;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0;
+}
+
+.dropdown-label {
+  cursor: pointer;
+  margin-bottom: 1%;
+}
+
+.dropdown-content {
+  display: none;
+  margin-bottom: 5%;
+}
+
+.dropdown-content.open {
+  display: block;
+}
+
+.footer .dropdown-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.wishlist-container {
+  display: flex;
+  flex-direction: column;
+  width: min(80%, 1200px);
+  margin: 1rem auto 2rem;
+}
+
+.wishlist-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  margin-bottom: 1rem;
+}
+
+.wishlist-thumb {
+  width: 95px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+}
+
+.wishlist-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+}
+
+.wishlist-info h3 {
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  margin: 0;
+  font-weight: 600;
+}
+
+.wishlist-info p {
+  margin: 0;
+  font-size: clamp(0.8rem, 1.6vw, 0.95rem);
+  color: #333;
+}
+
+.remove-btn {
+  padding: 0.55rem 0.9rem;
+  font-size: clamp(0.8rem, 1.6vw, 0.95rem);
+  font-family: Oswald, sans-serif;
+  background: #6b0909;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: auto; /* push to far right */
+}
+
+.remove-btn:hover {
+  background-color: #911111;
+}
+
+.empty-wishlist {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: none;
+      color: #6b0909;
+    }
+  }
+}
+
+.add-to-wishlist-btn {
+  padding: 0.7rem 1.1rem;
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  font-family: Oswald, sans-serif;
+  background: #6b0909;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  /* Slightly tighten nav spacing on tablets/smaller screens */
+  .navbar ul {
+    gap: 2.5vw;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .card {
+    flex-direction: column;
+    width: min(92%, 720px);
+  }
+
+  .product-image,
+  .product-desc {
+    flex: 1 1 100%;
+  }
+
+  .welcome {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Prevent navbar overflow on very small screens */
+  .navbar {
+    padding: 0 3%;
+  }
+  .navbar ul {
+    gap: 2vw;
+  }
+  .navbar li {
+    font-size: clamp(0.95rem, 3.2vw, 1.2rem);
+  }
+
+  /* Give heroes full width so overlay text has more room */
+  .hero {
+    margin: 11vh auto 2rem;
+    width: 100%;
+  }
+
+  /* Allow long car names on products page heroes to wrap within viewport */
+  .hero .car-text {
+    max-width: 96vw;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    padding: 0.5rem 0;
+  }
+
+  .car-text {
+    left: 4%;
+    top: 5%;
+    font-size: clamp(1.8rem, 12vw, 3.2rem);
+    -webkit-text-stroke-width: 0.5px;
+  }
+
+  .learn-more-button {
+    bottom: 6%;
+  }
+
+  .welcome {
+    flex-direction: column;
+    text-align: center;
+  }
+}
